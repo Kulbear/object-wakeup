@@ -1,0 +1,6 @@
+@inproceedings{Object_Wakeup_ECCV2022,
+  title={Object Wake-up: 3D Object Rigging from a Single Image},
+  author={Yang, Ji and Zuo, Xinxin, and Wang, Sen and Yu, Zhenbo and Li, Xingyu and Ni, Bingbing and Gong, Minglun, and Cheng, Li},
+  booktitle={Proceedings of the European Conference on Computer Vision},
+  year={2022}
+}
