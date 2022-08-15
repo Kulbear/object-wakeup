@@ -1,0 +1,69 @@
+
+method: network
+data:
+  dataset: images
+  classes: ['03001627']
+  path: ./demo_chair/
+  img_folder: img_choy2016
+  img_size: 224
+  points_subsample: 2048
+  dim: 3
+  points_file: points.npz
+  points_iou_file: points.npz
+  points_unpackbits: true
+  model_file: model.off
+  watertight_file: model_watertight.off
+  img_with_camera: false
+  img_augment: false
+
+model:
+  encoder_latent: null
+  decoder: cbatchnorm
+  encoder: vit_light
+  c_dim: 256
+  z_dim: 0
+  decoder_kwargs: { }
+  encoder_kwargs: { }
+  encoder_latent_kwargs: { }
+  multi_gpu: false
+  use_camera: false
+  dmc_weight_prior: 10.
+training:
+  out_dir:  ./demo_chair/
+  batch_size: 64
+  model_selection_metric: iou
+  model_selection_mode: maximize
+  visualize_every: 2000
+  validate_every: 2500
+test:
+  threshold: 0.2
+  eval_mesh: true
+  eval_pointcloud: false
+  model_file: ./checkpoint/model_best.pt
+generation:
+  batch_size: 100000
+  refine: false
+  n_x: 128
+  n_z: 1
+  resolution_0: 32
+  upsampling_steps: 2
+  generation_dir: generation
+  refinement_step: 30
+  simplify_nfaces: 5000
+  vis_n_outputs: 30
+  generate_mesh: true
+  generate_pointcloud: false
+  use_sampling: false
+  copy_groundtruth: false
+  copy_input: true
+  latent_number: 4
+  latent_H: 8
+  latent_W: 8
+  latent_ny: 2
+  latent_nx: 2
+  latent_repeat: true
+
+preprocessor:
+  type: null
+  config: ""
+  model_file: null
