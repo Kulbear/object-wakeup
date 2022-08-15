@@ -269,22 +269,11 @@
 
 			<br>
 			<p style="text-align:justify">
-				Given a single image of a general object such as a chair, could we also restore its articulated 3D shape
-				similar to human modeling, so as to animate its plausible articulations and diverse motions?
-				This is an interesting new question that may have numerous downstream augmented reality and virtual
-				reality applications.
-				Comparing with previous efforts on object manipulation, our work goes beyond 2D manipulation and rigid
-				deformation, and involves articulated manipulation.
-				To achieve this goal, we propose an automated approach to build such 3D generic objects from single
-				images and embed articulated skeletons in them. Specifically, our framework starts by reconstructing the
-				3D object from an input image. Afterwards, to extract skeletons for generic 3D objects, we develop a
-				novel skeleton prediction method with a multi-head structure for skeleton probability field estimation
-				by utilizing the deep implicit functions. A dataset of generic 3D objects with ground-truth annotated
-				skeletons is collected.
-				Empirically our approach is demonstrated with satisfactory performance on public datasets as well as our
-				in-house dataset;
-				our results surpass those of the state-of-the-arts by a noticeable margin on both 3D reconstruction and
-				skeleton prediction.
+				Given a single chair image, could we wake it up by reconstructing its 3D shape and skeleton, as well as animating its plausible articulations and motions, similar to that of human modeling?
+				It is a new problem that not only goes beyond image-based object reconstruction but also involves articulated animation of generic objects in 3D, which could give rise to numerous downstream augmented and virtual reality applications. 
+				In this paper, we propose an automated approach to tackle the entire process of reconstruct such generic 3D objects, rigging and animation, all from single images. 
+				A two-stage pipeline has thus been proposed, which specifically contains a multi-head structure to utilize the deep implicit functions for skeleton prediction. Two in-house 3D datasets of generic objects with high-fidelity rendering and annotated skeletons have also been constructed.
+				Empirically our approach demonstrated promising results; when evaluated on the related sub-tasks of 3D reconstruction and skeleton prediction, our results surpass those of the state-of-the-arts by a noticeable margin. Our code and datasets are made publicly available at the dedicated project website. 
 			</p>
 
 
@@ -418,7 +407,7 @@
 							<center>
 								<h1>Acknowledgements</h1>
 							</center>
-							TODO </br>
+							This research was partly supported by the NSERC Discovery, CFI-JELF and UAHJIC grants. We also thank Priyal Belgamwar for her contribution to the dataset annotation. </br>
 							This webpage template was borrowed from <a
 								href="https://richzhang.github.io/colorization/">here</a>.
 
